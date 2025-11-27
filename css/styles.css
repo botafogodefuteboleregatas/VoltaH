@@ -410,7 +410,7 @@ a {
 }
 
 .barra {
-    width: 70%;
+    width: 80%;
     height: 1px;
     background-color: #C4FF00;
     margin-top: 5px;
@@ -950,6 +950,7 @@ button:hover {
         padding: 10px;
     }
 }
+
 
 
 

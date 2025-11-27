@@ -1,0 +1,955 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navegacao {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 800;
+    position: fixed;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navegacao li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navegacao li a {
+    color: #C4FF00;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navegacao p {
+    color: #222222;
+}
+
+.navegacao li a img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 3px;
+}
+
+.carrinho {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #c4ff00;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-left: auto;
+    display: flex;
+    height: 50px;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;   
+}
+
+.carrinho:hover {
+    transform: scale(1.05);
+    background-color: #d4ff2a;
+}
+
+.logo {
+    font-family: "Exo 2", sans-serif;
+    color: #C4FF00;
+    text-align: center;
+}
+
+.fundo h1 {
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+    font-size: 8vh;
+    color: aliceblue;
+}
+
+.fundo {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 1000px;
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgb(0, 0, 0) 100%),
+    url(../imagens/fundo.png) center/cover no-repeat fixed;
+    flex-direction: column;
+}
+
+.receba {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.receba p {
+    font-family: "Montserrat Alternates", sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.fotos {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+    height: 640px;
+    flex-wrap: wrap; 
+    align-items: center;
+}
+
+.fotos img {
+    width: 900px;
+    height: 596px;
+    border-radius: 60px;
+    border: 3px solid #0F0F0F;
+    filter: blur(0px);
+    opacity: 1;
+    transition: all 1s;
+    flex: 1 1 45%;
+    max-width: 900px;
+}
+
+.legenda {
+    text-align: center;
+    position: relative;
+    bottom: -150px;
+    transition: bottom 1s;
+}
+
+.legenda a p {
+    color: #C4FF00;
+}
+
+.legenda a h2 {
+    color: #C4FF00;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 80px;
+}
+
+.produtos:hover .legenda {
+    bottom: 370px;
+}
+
+.sobrenos:hover .legenda {
+    bottom: 370px;
+}
+
+.produtos:hover img {
+    filter: blur(8px);
+    opacity: 0.8;
+}
+
+.sobrenos:hover img {
+    filter: blur(8px);
+    opacity: 0.8;
+}
+
+.bgprod h1 {
+    padding-top: 100px;
+    color: azure;
+    text-align: center;
+    font-family: "Exo 2", sans-serif;
+    font-size: 120px;
+}
+
+.bgprod h2 {
+    color: azure;
+    text-align: center;
+    font-family: "Exo 2", sans-serif;
+    font-size: 60px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 60px;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products img {
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    height: 740px;
+    width: 570px;
+    flex: 1 1 45%;
+    max-width: 570px;
+}
+
+.patinetes img {
+    opacity: 1;
+    transition: all 0.4s;
+    object-fit: cover;
+}
+
+.patinetelink p {
+    position: relative;
+    text-align: center;
+    bottom: 450px;
+    color: #C4FF00;
+    font-size: 60px;
+    font-family: "Montserrat Alternates", sans-serif;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.patinetes:hover p {
+    opacity: 1;
+}
+
+.patinetes:hover img {
+    opacity: 0.6;
+}
+
+.acessorios img {
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.acessorios p {
+    position: relative;
+    text-align: center;
+    bottom: 450px;
+    color: #C4FF00;
+    font-size: 60px;
+    font-family: "Montserrat Alternates", sans-serif;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.acessorios:hover p {
+    opacity: 1;
+}
+
+.acessorios:hover img {
+    opacity: 0.6;
+}
+
+.lifestyle img {
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.lifestyle p {
+    position: relative;
+    text-align: center;
+    bottom: 450px;
+    color: #C4FF00;
+    font-size: 60px;
+    font-family: "Montserrat Alternates", sans-serif;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.lifestyle:hover p {
+    opacity: 1;
+}
+
+.lifestyle:hover img {
+    opacity: 0.6;
+}
+
+body {
+    background-color: #0F0F0F;
+}
+
+a {
+    text-decoration: none;
+}
+
+.titulo {
+    text-align: center;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    padding-top: 100px;
+    font-size: 65px;
+}
+
+.prdts {
+    display: flex;
+    padding-left: 15px;
+    padding-top: 30px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px;
+}
+
+.prdts img {
+    height: 500px;
+    width: 450px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex: 1 1 30%;
+    max-width: 450px;
+}
+
+.prdt1 img, .prdt2 img, .prdt3 img {
+    opacity: 1;
+    transition: all 0.1s;
+}
+
+.prdt1:hover img {
+    opacity: 0.6;
+}
+
+.prdt2:hover img {
+    opacity: 0.6;
+}
+
+.prdt3:hover img {
+    opacity: 0.6;
+}
+
+.prdt1 p, .prdt2 p, .prdt3 p {
+    text-align: center;
+    color: #C4FF00;
+    font-size: 45px;
+    font-family: "Urbanist", sans-serif;
+}
+
+.prdt1, .prdt2, .prdt3 {
+    margin: 5px;
+    border: 3px solid #222222;
+    background-color: #222222;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guia {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    padding-top: 120px;
+    color: white;
+    font-size: x-large;
+    margin-left: 3%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.guia a {
+    color: #C4FF00;
+    text-decoration: none;
+}
+
+.guia1:hover {
+    text-decoration: underline;
+}
+
+.guia2:hover {
+    text-decoration: underline;
+}
+
+.produtao {
+    display: flex;
+    padding-top: 10px;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    margin-left: 2%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.produtao img {
+    border-radius: 30px;
+    height: 930px;
+    width: 930px;
+    flex: 1 1 45%;
+    max-width: 930px;
+}
+
+.conteudo h2 {
+    color: #C4FF00;
+    font-size: 45px;
+    font-family: "Urbanist", sans-serif;
+}
+
+.conteudo p {
+    color: #C4FF00;
+    font-size: 20px;
+    font-family: "Urbanist", sans-serif;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 30px;
+    flex: 1 1 45%;
+}
+
+.barra {
+    width: 70%;
+    height: 1px;
+    background-color: #C4FF00;
+    margin-top: 5px;
+}
+
+.cores {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cores img {
+    border: 1px solid #C4FF00;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.preco p {
+    font-size: 100px;
+}
+
+.preco {
+    display: flex;
+    margin-top: 200px;
+}
+
+.comprar {
+    display: flex;
+    width: 100%;
+    height: 140px;
+    margin-top: 100px;
+}
+
+.comprar:hover .butao {
+    transform: rotateY(180deg);
+}
+
+.butao {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.frente, .tras {
+    display: flex;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+.frente {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: 10px solid #C4FF00;
+    background-color: #C4FF00;
+    font-family: "Exo 2", sans-serif;
+    font-size: 80px;
+}
+
+.tras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    border: 10px solid grey;
+    font-size: 60px;
+    font-family: "Exo 2", sans-serif;
+    transform: rotateY(180deg);
+}
+
+.noshist {
+    padding-top: 4%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noshistimg img {
+    height: 60vh;
+    width: 110vh;
+    border-radius: 10px;
+    max-width: 100%; 
+}
+
+.noshistimg {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.noshist h1 {
+    font-family: "Urbanist", sans-serif;
+    font-size: 300%;
+}
+
+.noshistp {
+    margin-top: 3%;
+    color: white;
+    display: flex;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-family: "Urbanist", sans-serif;
+    font-size: 150%;
+    flex-direction: column;
+}
+
+.contato {
+    height: 100vh;               
+    padding: 5%;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;          
+    font-family: "exo 2", sans-serif;
+}
+
+.texto-contato h1 {
+    font-size: 80px;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.formulario {
+    background: #111;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.08);
+    width: 600px; 
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    margin-top: 8px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    background: #2c2c2c;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 16px;
+    background: #c4ff00;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #617c08;
+    transform: scale(1.07);
+}
+
+
+@media (max-width: 1024px) {
+    .fundo h1 {
+        font-size: 400%;
+    }
+    .fotos img {
+        width: 700px;
+        height: 463px;
+    }
+    .bgprod h1 {
+        font-size: 80px;
+    }
+    .bgprod h2 {
+        font-size: 40px;
+    }
+    .products img {
+        height: 600px;
+        width: 450px;
+    }
+    .prdts img {
+        height: 400px;
+        width: 350px;
+    }
+    .titulo {
+        font-size: 50px;
+    }
+    .produtao img {
+        height: 700px;
+        width: 700px;
+    }
+    .conteudo h2 {
+        font-size: 35px;
+    }
+    .conteudo p {
+        font-size: 18px;
+    }
+    .preco p {
+        font-size: 80px;
+    }
+    .frente {
+        font-size: 60px;
+    }
+    .tras {
+        font-size: 45px;
+    }
+    .noshist h1 {
+        font-size: 200%;
+    }
+    .noshistp {
+        font-size: 120%;
+    }
+    .contato {
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+    }
+    .texto-contato h1 {
+        font-size: 60px;
+        max-width: 100%;
+    }
+    .formulario {
+        width: 80%;
+        max-width: 500px;
+        padding: 30px;
+    }
+    fieldset {
+        gap: 18px;
+    }
+    label {
+        font-size: 16px;
+    }
+    input, select, textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+    button {
+        font-size: 18px;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navegacao {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .carrinho {
+        margin-right: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .fundo h1 {
+        font-size: 250%;
+    }
+    .fotos {
+        flex-direction: column;
+        height: auto;
+        padding-top: 20px;
+    }
+    .fotos img {
+        width: 90%;
+        height: auto;
+        max-width: 600px;
+    }
+    .legenda a h2 {
+        font-size: 50px;
+    }
+    .bgprod h1 {
+        font-size: 60px;
+    }
+    .bgprod h2 {
+        font-size: 30px;
+    }
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+    .products img {
+        height: 500px;
+        width: 80%;
+        max-width: 500px;
+    }
+    .patinetelink p, .acessorios p, .lifestyle p {
+        font-size: 40px;
+        bottom: 300px;
+    }
+    .prdts {
+        flex-direction: column;
+        align-items: center;
+    }
+    .prdt1, .prdt2, .prdt3 {
+        flex: 1 1 80%;
+        max-width: 400px;
+    }
+    .prdts img {
+        height: 300px;
+        width: 100%;
+        max-width: 400px;
+    }
+    .prdt1 p, .prdt2 p, .prdt3 p {
+        font-size: 30px;
+    }
+    .titulo {
+        font-size: 40px;
+    }
+    .guia {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .produtao {
+        flex-direction: column;
+        align-items: center;
+    }
+    .produtao img {
+        height: 500px;
+        width: 80%;
+        max-width: 500px;
+    }
+    .conteudo {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .barra {
+        width: 50vh;
+    }
+    .preco {
+        margin-top: 100px;
+    }
+    .preco p {
+        font-size: 60px;
+    }
+    .comprar {
+        margin-top: 50px;
+    }
+    .frente {
+        font-size: 50px;
+    }
+    .tras {
+        font-size: 35px;
+    }
+    .noshistimg img {
+        height: 40vh;
+        width: 80vh;
+    }
+    .noshist h1 {
+        font-size: 150%;
+    }
+    .noshistp {
+        font-size: 100%;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    .contato {
+        flex-direction: column;
+        align-items: center;
+        padding: 15%;
+        height: auto;
+    }
+    .texto-contato h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    .formulario {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+    }
+    fieldset {
+        gap: 15px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input, select, textarea {
+        padding: 10px;
+        font-size: 12px;
+    }
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fundo h1 {
+        font-size: 150%;
+    }
+    .receba p {
+        font-size: large;
+    }
+    .fotos img {
+        width: 95%;
+        height: auto;
+    }
+    .legenda a h2 {
+        font-size: 30px;
+    }
+    .bgprod h1 {
+        font-size: 40px;
+    }
+    .bgprod h2 {
+        font-size: 20px;
+    }
+    .products img {
+        height: 300px;
+        width: 90%;
+    }
+    .patinetelink p, .acessorios p, .lifestyle p {
+        font-size: 25px;
+        bottom: 200px;
+    }
+    .prdts img {
+        height: 200px;
+        width: 90%;
+    }
+    .prdt1 p, .prdt2 p, .prdt3 p {
+        font-size: 20px;
+    }
+    .titulo {
+        font-size: 30px;
+    }
+    .guia {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .produtao {
+        flex-direction: column;
+        align-items: center;
+    }
+    .produtao img {
+        height: 400px;
+        width: 80%;
+        max-width: 400px;
+    }
+    .conteudo {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .barra {
+        width: 30vh;
+    }
+    .preco {
+        margin-top: 50px;
+    }
+    .preco p {
+        font-size: 40px;
+    }
+    .comprar {
+        margin-top: 30px;
+    }
+    .frente {
+        font-size: 30px;
+    }
+    .tras {
+        font-size: 25px;
+    }
+    .noshistimg img {
+        height: 30vh;
+        width: 60vh;
+    }
+    .noshist h1 {
+        font-size: 120%;
+    }
+    .noshistp {
+        font-size: 80%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .contato {
+        flex-direction: column;
+        align-items: center;
+        padding: 20%;
+        height: auto;
+    }
+    .texto-contato h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .formulario {
+        width: 95%;
+        max-width: 350px;
+        padding: 15px;
+    }
+    fieldset {
+        gap: 12px;
+    }
+    label {
+        font-size: 12px;
+    }
+    input, select, textarea {
+        padding: 8px;
+        font-size: 10px;
+    }
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
